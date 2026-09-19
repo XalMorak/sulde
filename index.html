@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="mn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SÜLDE — The Last Banner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="view"></canvas>
+      <div id="vignette"></div>
+      <div id="hurt"></div>
+      <div id="death-veil"></div>
+      <header id="title-layer" class="layer">
+        <div class="title-mark">С Ү Л Д</div>
+        <h1>SÜLDE</h1>
+        <p class="subtitle">The Last Banner</p>
+        <p class="lore">Тэнгэрийн сүлд унтарсан.<br />The banners of heaven have gone dark. Only one remains.</p>
+        <button id="enter-btn" type="button">Эхлэх · Begin</button>
+        <p class="hint-keys">WASD · Mouse · Space dodge · LMB light · RMB heavy · Q lock-on · F flask · E rest</p>
+      </header>
+      <section id="class-layer" class="layer hidden">
+        <p class="class-kicker">Choose your remnant</p>
+        <h2>Таван зам · Five Paths</h2>
+        <div id="class-grid" class="class-grid"></div>
+        <button id="embark-btn" type="button" disabled>Явцгаая · Embark</button>
+      </section>
+      <div id="hud" class="hidden">
+        <div id="boss-bar" class="hidden">
+          <div class="boss-name" id="boss-name">Khar Sülde, Black Banner</div>
+          <div class="bar boss"><i id="boss-hp"></i></div>
+        </div>
+        <div class="hud-left">
+          <div class="bar hp"><i id="hp-fill"></i></div>
+          <div class="bar sta"><i id="sta-fill"></i></div>
+          <div class="flasks" id="flask-row"></div>
+        </div>
+        <div class="hud-right">
+          <div class="souls"><span id="soul-count">0</span> СҮЛД</div>
+          <div class="class-tag" id="class-tag">—</div>
+        </div>
+        <div id="prompt" class="prompt hidden"></div>
+        <div id="lock-hint" class="lock-hint hidden">LOCKED</div>
+        <div id="toast" class="toast hidden"></div>
+        <div id="you-died" class="you-died hidden">YOU DIED</div>
+      </div>
+      <aside id="help" class="help hidden">
+        <b>Combat</b>
+        LMB light · RMB heavy · Space dodge · Shift sprint<br />
+        Q lock-on · F restore · E ovoo rest · Esc pause
+      </aside>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
